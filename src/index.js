@@ -1,13 +1,13 @@
 const express = require('express')
 const app = express()
-const port = 3001
+const port = 3000
 const bodyParser = require('body-parser')
 const Router = require('express')
 const router = new Router();
 
 app.use(bodyParser.json())
 
-router.use('/students', require('./api/routes/students'))
+router.use('/students', require('./api/routes/students.router'))
 router.use('/teachers', require('./api/routes/teachers'))
 
 app.use('/', router)
